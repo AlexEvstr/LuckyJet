@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerBehavior : MonoBehaviour
+{
+    [SerializeField] private GameObject _playerDestroy;
+    [SerializeField] private GameObject _gameOverPanel;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Platform"))
+        {
+            GameObject destroy = Instantiate(_playerDestroy, new Vector2((collision.gameObject.transform.position.x + transform.position.x) / 2, (collision.gameObject.transform.position.y + transform.position.y) / 2), Quaternion.identity);
+            StartCoroutine(ShowGameOverPanel());
+            
+        }
+    }
+
+    private IEnumerator ShowGameOverPanel()
+    {
+        yield return new WaitForSeconds(0.05f);
+        _gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+}

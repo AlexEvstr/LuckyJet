@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 533520369398506857}
   - component: {fileID: 2178371087020801697}
   - component: {fileID: -4473608840431993046}
-  - component: {fileID: -6000656134764831050}
-  - component: {fileID: -3361659559666244818}
+  - component: {fileID: 5190414570632235189}
+  - component: {fileID: 2733230513255568868}
   m_Layer: 0
   m_Name: playerFireball
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2178371087020801697
 SpriteRenderer:
@@ -101,23 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyDestroy: {fileID: 2878230248961116355, guid: b065afd19dcf14d46ba23d6dac709f79, type: 3}
   _enemy: {fileID: 2254026198239619145, guid: 8096657ad03674180b34b06edfcadef2, type: 3}
---- !u!58 &-6000656134764831050
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7147209165056595373}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.55
---- !u!50 &-3361659559666244818
+--- !u!50 &5190414570632235189
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -138,3 +122,45 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &2733230513255568868
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7147209165056595373}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1, y: 1.1}
+    newSize: {x: 1.1, y: 1.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.39, y: 0.22999999}
+      - {x: 0.32, y: 0.32}
+      - {x: 0.12, y: 0.44}
+      - {x: 0.04, y: 0.45}
+      - {x: -0.16, y: 0.45}
+      - {x: -0.22, y: 0.42999998}
+      - {x: -0.42999998, y: 0.19999999}
+      - {x: -0.45, y: 0.11}
+      - {x: -0.45, y: -0.089999996}
+      - {x: -0.38, y: -0.25}
+      - {x: -0.22, y: -0.39999998}
+      - {x: -0.14, y: -0.42}
+      - {x: 0.19, y: -0.42}
+      - {x: 0.42, y: -0.22}
+      - {x: 0.44, y: 0}
+      - {x: 0.44, y: 0.08}
+  m_UseDelaunayMesh: 0

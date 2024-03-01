@@ -18,7 +18,7 @@ public class PlayerFireBallBehavior : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            GameObject destroy = Instantiate(_enemyDestroy, new Vector2(_enemy.transform.position.x, _enemy.transform.position.y), Quaternion.identity);
+            GameObject destroy = Instantiate(_enemyDestroy, new Vector2(collision.transform.position.x, collision.transform.position.y), Quaternion.identity);
             Destroy(collision.gameObject);
             Destroy(destroy, 0.2f);
             Destroy(gameObject);
