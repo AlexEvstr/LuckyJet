@@ -15,6 +15,11 @@ public class PlayerBehavior : MonoBehaviour
             StartCoroutine(ShowGameOverPanel());
             
         }
+        else if (collision.gameObject.CompareTag("Gem"))
+        {
+            GameData.Gems++;
+            Destroy(collision.gameObject);
+        }
     }
 
     private IEnumerator ShowGameOverPanel()

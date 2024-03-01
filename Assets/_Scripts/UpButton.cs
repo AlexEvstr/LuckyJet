@@ -9,7 +9,7 @@ public class UpButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private GameObject _player;
 
-    public static float _force = 5.0f;
+    public static float _force = 3.0f;
 
     private bool _isTapped;
 

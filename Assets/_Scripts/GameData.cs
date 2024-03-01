@@ -5,7 +5,6 @@ using TMPro;
 
 public class GameData : MonoBehaviour
 {
-    public static int Score;
     public static int Gems;
     public static int MagnetBonus;
     public static int BombBonus;
@@ -14,10 +13,10 @@ public class GameData : MonoBehaviour
     [SerializeField] private TMP_Text _magnetText;
     [SerializeField] private TMP_Text _bombText;
     [SerializeField] private TMP_Text _x2Text;
+    [SerializeField] private TMP_Text _gemsText;
 
     private void Start()
     {
-        Score = PlayerPrefs.GetInt("Score", 0);
         Gems = PlayerPrefs.GetInt("Gems", 0);
         MagnetBonus = PlayerPrefs.GetInt("MagnetBonus", 5);
         BombBonus = PlayerPrefs.GetInt("BombBonus", 5);
@@ -26,7 +25,6 @@ public class GameData : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerPrefs.SetInt("Score", Score);
         PlayerPrefs.SetInt("Gems", Gems);
         PlayerPrefs.SetInt("MagnetBonus", MagnetBonus);
         PlayerPrefs.SetInt("BombBonus", BombBonus);
@@ -38,5 +36,6 @@ public class GameData : MonoBehaviour
         _magnetText.text = MagnetBonus.ToString();
         _bombText.text = BombBonus.ToString();
         _x2Text.text = X2Bonus.ToString();
+        _gemsText.text = Gems.ToString();
     }
 }
