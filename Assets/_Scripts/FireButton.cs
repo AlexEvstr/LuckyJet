@@ -11,4 +11,16 @@ public class FireButton : MonoBehaviour
     {
         Instantiate(_playerFireBall, new Vector2(_player.transform.position.x, _player.transform.position.y), Quaternion.identity); ;
     }
+
+
+    /// УДАЛИТЬ (для тестов)
+    private void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            ShootFireBall();
+        }
+    }
+    ///
+
 }

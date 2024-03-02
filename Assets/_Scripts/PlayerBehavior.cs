@@ -24,7 +24,7 @@ public class PlayerBehavior : MonoBehaviour
         else if (collision.gameObject.CompareTag("Fuel"))
         {
             Destroy(collision.gameObject);
-            FuelController.FuelQuantity += 0.1f;
+            FuelController.FuelQuantity += 0.25f;
             if (FuelController.FuelQuantity > 1)
             {
                 FuelController.FuelQuantity = 1;
@@ -37,5 +37,14 @@ public class PlayerBehavior : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         _gameOverPanel.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    private void Update()
+    {
+        if (FuelController.FuelQuantity <= 0)
+        {
+            _gameOverPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }
