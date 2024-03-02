@@ -2141,6 +2141,11 @@ MonoBehaviour:
   - {fileID: 4496140548683885578, guid: 2e12d9dbc2a45469dabd7fcf5d41ee1c, type: 3}
   - {fileID: 6202613619975944133, guid: 3f6b5cfabee344385a9cb33d79a3dcda, type: 3}
   - {fileID: 1668360627614746580, guid: ddd00528f139d434ab7f108d97148f3d, type: 3}
+  _bossPlatforms:
+  - {fileID: 6049606256402177538, guid: 5438b85942c90423da60ca6674be81df, type: 3}
+  - {fileID: 1547819571731868322, guid: d6cb0ffdcfd354bb5abdf06e0062d096, type: 3}
+  - {fileID: 700953491315477385, guid: bf66d0321a8274536868dcc9a406aa20, type: 3}
+  - {fileID: 2834499736795431772, guid: 050754b0357694dbba3622d1fc720362, type: 3}
 --- !u!114 &1049109534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3820,7 +3825,7 @@ GameObject:
   - component: {fileID: 1858056186}
   m_Layer: 5
   m_Name: FuelBarFrame
-  m_TagString: Untagged
+  m_TagString: FuelBarUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3899,7 +3904,7 @@ GameObject:
   - component: {fileID: 1860458640}
   m_Layer: 5
   m_Name: gems
-  m_TagString: Untagged
+  m_TagString: GemsUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,14 +13,35 @@ public class FireButton : MonoBehaviour
     }
 
 
-    /// УДАЛИТЬ (для тестов)
+    /// УДАЛИТЬ (для тестов)/////////////////////////////////////////////////////////////////////////////////
+    public static bool _oneCopy = false;
     private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            ShootFireBall();
+            if (_oneCopy == false)
+            {
+                ShootFireBall();
+                _oneCopy = true;
+            }
+
         }
     }
-    ///
+
+    private void Start()
+    {
+        StartCoroutine(ChangeBool());
+    }
+
+    private IEnumerator ChangeBool()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            _oneCopy = false;
+        }
+        
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }
