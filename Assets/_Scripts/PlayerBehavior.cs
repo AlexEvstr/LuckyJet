@@ -20,6 +20,16 @@ public class PlayerBehavior : MonoBehaviour
             GameData.Gems++;
             Destroy(collision.gameObject);
         }
+
+        else if (collision.gameObject.CompareTag("Fuel"))
+        {
+            Destroy(collision.gameObject);
+            FuelController.FuelQuantity += 0.1f;
+            if (FuelController.FuelQuantity > 1)
+            {
+                FuelController.FuelQuantity = 1;
+            }
+        }
     }
 
     private IEnumerator ShowGameOverPanel()

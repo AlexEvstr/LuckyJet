@@ -11,7 +11,7 @@ public class UpButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public static float _force = 3.0f;
 
-    private bool _isTapped;
+    private bool _isTapped = false;
 
     public void OnPointerUp(PointerEventData eventData)
     {
@@ -23,11 +23,12 @@ public class UpButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         _isTapped = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (_isTapped)
         {
             _player.GetComponent<Rigidbody2D>().velocity = Vector2.up * _force;
+            FuelController.FuelQuantity -= 0.0025f;
         }
     }
 }
