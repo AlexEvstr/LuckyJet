@@ -7,6 +7,7 @@ public class ScoreCounter : MonoBehaviour
     [SerializeField] private TMP_Text _scoreText;
 
     public static int Score;
+    public static float ScoreIncreaseTime = 0.005f;
 
     private void Start()
     {
@@ -64,7 +65,7 @@ public class ScoreCounter : MonoBehaviour
         while (true)
         {
             Score++;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(ScoreIncreaseTime);
         }
     }
 }
