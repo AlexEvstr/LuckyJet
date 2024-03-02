@@ -8,18 +8,19 @@ public class PlatformSpawner : MonoBehaviour
     [SerializeField] private GameObject[] _bossPlatforms;
 
     public static bool isBoss;
-    public static bool _oneCopy;
+    public static bool _oneCopyPlatforms;
+    public static bool _oneCopyBoss;
 
     private int _bossIndex;
 
     private void Start()
     {
         isBoss = false;
-        _oneCopy = false;
-        StartCoroutine(SpawnPlatform());
+        _oneCopyPlatforms = false;
+        _oneCopyBoss = false;
     }
 
-    private IEnumerator SpawnPlatform()
+    public IEnumerator SpawnPlatform()
     {
         while(isBoss == false)
         {
@@ -32,15 +33,23 @@ public class PlatformSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (ScoreCounter.Score % 1000 == 0)
+        if (ScoreCounter.Score % 5000 == 0)
         {
             isBoss = true;
-            if (_oneCopy == false)
+            if (_oneCopyBoss == false)
             {
+                StopCoroutine(SpawnPlatform());
                 SpawnBoss();
-                _oneCopy = true;
+                _oneCopyBoss = true;
             }
-            
+        }
+        else
+        {
+            if (_oneCopyPlatforms == false)
+            {
+                StartCoroutine(SpawnPlatform());
+                _oneCopyPlatforms = true;
+            }
         }
     }
 

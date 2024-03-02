@@ -7,9 +7,13 @@ public class Manager : MonoBehaviour
 {
     [SerializeField] private GameObject _pausePanel;
 
+    private GameObject _bossHpBar;
+
     private void Start()
     {
         Time.timeScale = 1;
+        _bossHpBar = GameObject.FindGameObjectWithTag("BossHPBar");
+        _bossHpBar.SetActive(false);
     }
 
     public void HomeButton()
