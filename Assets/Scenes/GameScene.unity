@@ -2461,6 +2461,7 @@ MonoBehaviour:
   _bombText: {fileID: 669136357}
   _x2Text: {fileID: 950308570}
   _gemsText: {fileID: 1341425876}
+  _screenOrientation: 3
 --- !u!114 &1049109536
 MonoBehaviour:
   m_ObjectHideFlags: 0

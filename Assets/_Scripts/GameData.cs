@@ -15,8 +15,11 @@ public class GameData : MonoBehaviour
     [SerializeField] private TMP_Text _x2Text;
     [SerializeField] private TMP_Text _gemsText;
 
+    [SerializeField] private ScreenOrientation _screenOrientation;
+
     private void Start()
     {
+        Screen.orientation = _screenOrientation;
         Gems = PlayerPrefs.GetInt("Gems", 0);
         MagnetBonus = PlayerPrefs.GetInt("MagnetBonus", 5);
         BombBonus = PlayerPrefs.GetInt("BombBonus", 5);
