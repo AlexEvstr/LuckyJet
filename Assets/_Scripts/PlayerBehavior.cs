@@ -9,7 +9,8 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Platform"))
+        
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("BossFireBall"))
         {
             GameObject destroy = Instantiate(_playerDestroy, new Vector2((collision.gameObject.transform.position.x + transform.position.x) / 2, (collision.gameObject.transform.position.y + transform.position.y) / 2), Quaternion.identity);
             StartCoroutine(ShowGameOverPanel());

@@ -714,6 +714,7 @@ GameObject:
   - component: {fileID: 8004617958443578502}
   - component: {fileID: 8004617958443578505}
   - component: {fileID: 8004617957849937392}
+  - component: {fileID: 1292308110929764465}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -991,3 +992,16 @@ PolygonCollider2D:
       - {x: 1.15, y: -0.68}
       - {x: 1.15, y: -0.66999996}
   m_UseDelaunayMesh: 0
+--- !u!114 &1292308110929764465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8004617958443578507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f64f71fe9e744ffbd4ea57c77afa40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bossFireBall: {fileID: 6716831998692361884, guid: 654f3f2a97f584ebbbf30883309ce573, type: 3}

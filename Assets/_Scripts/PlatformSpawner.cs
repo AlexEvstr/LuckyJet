@@ -51,7 +51,9 @@ public class PlatformSpawner : MonoBehaviour
         {
             
             SpawnBoss();
-            
+            _oneCopyBoss = true;
+
+
         }
         else
         {
@@ -87,6 +89,5 @@ public class PlatformSpawner : MonoBehaviour
         {
             _bossIndex = 0;
         }
-        _oneCopyBoss = true;
     }
 }
