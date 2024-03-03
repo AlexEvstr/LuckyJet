@@ -27,13 +27,18 @@ public class PlayerFireBallBehavior : MonoBehaviour
         else if (collision.gameObject.CompareTag("Boss"))
         {
             GameObject destroy = Instantiate(_enemyDestroy, new Vector2(collision.transform.position.x, collision.transform.position.y), Quaternion.identity);
-            Destroy(collision.gameObject);
             Destroy(destroy, 0.2f);
-            Destroy(gameObject);
 
-            PlatformSpawner.isBoss = false;
-            PlatformSpawner._oneCopyBoss = false;
-            PlatformSpawner._oneCopyPlatforms = false;
+            PlatformSpawner.CurrentHpBoss -= 0.1f;
+            if (PlatformSpawner.CurrentHpBoss <= 0)
+            {
+                Destroy(collision.gameObject);
+                PlatformSpawner.isBoss = false;
+                PlatformSpawner._oneCopyBoss = false;
+                PlatformSpawner._oneCopyPlatforms = false;
+            } 
+
+            Destroy(gameObject);
         }
     }
 }

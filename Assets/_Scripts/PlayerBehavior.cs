@@ -13,7 +13,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             GameObject destroy = Instantiate(_playerDestroy, new Vector2((collision.gameObject.transform.position.x + transform.position.x) / 2, (collision.gameObject.transform.position.y + transform.position.y) / 2), Quaternion.identity);
             StartCoroutine(ShowGameOverPanel());
-            
+
         }
         else if (collision.gameObject.CompareTag("Gem"))
         {
