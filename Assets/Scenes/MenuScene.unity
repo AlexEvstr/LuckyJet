@@ -3621,7 +3621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &699181440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5304,6 +5304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentGemsText: {fileID: 1454723437}
   _speeningPanel: {fileID: 398859067}
+  _cantSpeen: {fileID: 699181439}
 --- !u!1 &1025004619
 GameObject:
   m_ObjectHideFlags: 0

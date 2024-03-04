@@ -59,8 +59,7 @@ public class SpeeningBehavior : MonoBehaviour
         }
         else
         {
-            _cantSpeen.SetActive(true);
-            _speeningPanel.SetActive(false);
+            TurnOnCantSpin();
         }
     }
 
@@ -68,17 +67,26 @@ public class SpeeningBehavior : MonoBehaviour
     {
         GameData.MagnetBonus++;
         _magnetGift.SetActive(false);
+        TurnOnCantSpin();
     }
 
     public void ClaimBomb()
     {
         GameData.BombBonus++;
         _bombGift.SetActive(false);
+        TurnOnCantSpin();
     }
 
     public void ClaimX2()
     {
         GameData.X2Bonus++;
         _x2Gift.SetActive(false);
+        TurnOnCantSpin();
+    }
+
+    private void TurnOnCantSpin()
+    {
+        _cantSpeen.SetActive(true);
+        _speeningPanel.SetActive(false);
     }
 }
