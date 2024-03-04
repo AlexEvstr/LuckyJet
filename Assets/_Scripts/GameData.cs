@@ -28,6 +28,11 @@ public class GameData : MonoBehaviour
     {
         Screen.orientation = _screenOrientation;
         Gems = PlayerPrefs.GetInt("Gems", 0);
+        //////
+        //////
+        Gems = 10000;
+        //////
+        /////
         MagnetBonus = PlayerPrefs.GetInt("MagnetBonus", 5);
         BombBonus = PlayerPrefs.GetInt("BombBonus", 5);
         X2Bonus = PlayerPrefs.GetInt("X2Bonus", 5);
