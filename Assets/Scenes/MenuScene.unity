@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 71b7cb7608daa49a3bd460c9b6e99adf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05c73d92d69894fa6808b2e49b7ad4a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2096,6 +2096,7 @@ GameObject:
   - component: {fileID: 978729920}
   - component: {fileID: 978729921}
   - component: {fileID: 978729922}
+  - component: {fileID: 978729923}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -2205,6 +2206,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52c56f67b6c54af0bc331e549af201f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &978729923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978729915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d5658c89edd54487ae461a901f348ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1025004619
@@ -3294,6 +3307,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 978729923}
+        m_TargetAssemblyTypeName: ResetButton, Assembly-CSharp
+        m_MethodName: ResetStats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1507248823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4079,7 +4104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 71b7cb7608daa49a3bd460c9b6e99adf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c85065c18e3c54578b57370ea2a6e3fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

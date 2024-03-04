@@ -13,6 +13,11 @@ public class StatsPanel : MonoBehaviour
 
     private void Start()
     {
+        UpdateStats();
+    }
+
+    public void UpdateStats()
+    {
         _bestScoreText.text = GameData.BestScore.ToString();
         _totalCoinsText.text = GameData.TotalCoins.ToString();
         _totalKillsText.text = GameData.TotalKills.ToString();
