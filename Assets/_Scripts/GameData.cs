@@ -42,6 +42,10 @@ public class GameData : MonoBehaviour
         TotalKills = PlayerPrefs.GetInt("TotalKills", 0);
         TotalBosses = PlayerPrefs.GetInt("TotalBosses", 0);
         TotalDeaths = PlayerPrefs.GetInt("TotalDeaths", 0);
+
+        UpButton.Force = PlayerPrefs.GetFloat("Force", 2.0f);
+        UpButton.Stamina = PlayerPrefs.GetFloat("Stamina", 0.0025f);
+        UpButton.Damage = PlayerPrefs.GetFloat("Damage", 0.1f);
     }
 
     private void OnDisable()
@@ -56,6 +60,10 @@ public class GameData : MonoBehaviour
         PlayerPrefs.SetInt("TotalKills", TotalKills);
         PlayerPrefs.SetInt("TotalBosses", TotalBosses);
         PlayerPrefs.SetInt("TotalDeaths", TotalDeaths);
+
+        PlayerPrefs.SetFloat("Force", UpButton.Force);
+        PlayerPrefs.SetFloat("Stamina", UpButton.Stamina);
+        PlayerPrefs.SetFloat("Damage", UpButton.Damage);
     }
 
     private void Update()

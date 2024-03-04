@@ -60,4 +60,22 @@ public class ShopPanel : MonoBehaviour
         if (GameData.Gems < 1000) _NotEnoughGems.SetActive(true);
         else _NotEnoughGems.SetActive(false);
     }
+
+    public void IncreaseJetPackForce()
+    {
+        UpButton.Force += 0.2f;
+        PlayerPrefs.SetFloat("Force", UpButton.Force);
+    }
+
+    public void IncreaseStamina()
+    {
+        UpButton.Stamina -= 0.0001f;
+        PlayerPrefs.SetFloat("Stamina", UpButton.Stamina);
+    }
+
+    public void IncreaseDamage()
+    {
+        UpButton.Damage += 0.1f;
+        PlayerPrefs.SetFloat("Damage", UpButton.Damage);
+    }
 }

@@ -30,7 +30,7 @@ public class PlayerFireBallBehavior : MonoBehaviour
             GameObject destroy = Instantiate(_enemyDestroy, new Vector2(collision.transform.position.x, collision.transform.position.y), Quaternion.identity);
             Destroy(destroy, 0.2f);
 
-            PlatformSpawner.CurrentHpBoss -= 0.1f;
+            PlatformSpawner.CurrentHpBoss -= UpButton.Damage;
             if (PlatformSpawner.CurrentHpBoss <= 0)
             {
                 Destroy(collision.gameObject);

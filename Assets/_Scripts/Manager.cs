@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Debug.Log(UpButton.Force);
     }
 
     public void HomeButton()

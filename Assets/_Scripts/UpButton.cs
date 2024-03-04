@@ -9,7 +9,9 @@ public class UpButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private GameObject _player;
 
-    public static float _force = 3.0f;
+    public static float Force = 2.0f;
+    public static float Stamina = 0.0025f;
+    public static float Damage = 0.1f;
 
     private bool _isTapped = false;
 
@@ -27,8 +29,8 @@ public class UpButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         if (_isTapped)
         {
-            _player.GetComponent<Rigidbody2D>().velocity = Vector2.up * _force;
-            FuelController.FuelQuantity -= 0.0025f;
+            _player.GetComponent<Rigidbody2D>().velocity = Vector2.up * Force;
+            FuelController.FuelQuantity -= Stamina;
         }
     }
 }
