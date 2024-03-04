@@ -18,6 +18,11 @@ public class ScoreCounter : MonoBehaviour
     private void Update()
     {
         ShowScore();
+        if (Score > GameData.BestScore)
+        {
+            GameData.BestScore = Score;
+            PlayerPrefs.SetInt("BestScore", GameData.BestScore);
+        }
     }
 
     private void ShowScore()

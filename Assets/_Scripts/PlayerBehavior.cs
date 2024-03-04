@@ -19,6 +19,7 @@ public class PlayerBehavior : MonoBehaviour
         else if (collision.gameObject.CompareTag("Gem"))
         {
             GameData.Gems++;
+            GameData.TotalCoins++;
             Destroy(collision.gameObject);
         }
 
@@ -37,6 +38,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(0.05f);
         _gameOverPanel.SetActive(true);
+        GameData.TotalDeaths++;
         Time.timeScale = 0;
     }
 
@@ -45,6 +47,7 @@ public class PlayerBehavior : MonoBehaviour
         if (FuelController.FuelQuantity <= 0)
         {
             _gameOverPanel.SetActive(true);
+            GameData.TotalDeaths++;
             Time.timeScale = 0;
         }
     }

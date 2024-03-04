@@ -21,6 +21,7 @@ public class PlayerFireBallBehavior : MonoBehaviour
             GameObject destroy = Instantiate(_enemyDestroy, new Vector2(collision.transform.position.x, collision.transform.position.y), Quaternion.identity);
             Destroy(collision.gameObject);
             Destroy(destroy, 0.2f);
+            GameData.TotalKills++;
             Destroy(gameObject);
         }
 
@@ -33,6 +34,7 @@ public class PlayerFireBallBehavior : MonoBehaviour
             if (PlatformSpawner.CurrentHpBoss <= 0)
             {
                 Destroy(collision.gameObject);
+                GameData.TotalBosses++;
                 PlatformSpawner.isBoss = false;
                 PlatformSpawner._oneCopyBoss = false;
                 PlatformSpawner._oneCopyPlatforms = false;

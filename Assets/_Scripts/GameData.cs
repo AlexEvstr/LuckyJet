@@ -10,6 +10,13 @@ public class GameData : MonoBehaviour
     public static int BombBonus;
     public static int X2Bonus;
 
+    public static int BestScore;
+    public static int TotalCoins;
+    public static int TotalKills;
+    public static int TotalBosses;
+    public static int TotalDeaths;
+
+
     [SerializeField] private TMP_Text _magnetText;
     [SerializeField] private TMP_Text _bombText;
     [SerializeField] private TMP_Text _x2Text;
@@ -24,6 +31,12 @@ public class GameData : MonoBehaviour
         MagnetBonus = PlayerPrefs.GetInt("MagnetBonus", 5);
         BombBonus = PlayerPrefs.GetInt("BombBonus", 5);
         X2Bonus = PlayerPrefs.GetInt("X2Bonus", 5);
+
+        BestScore = PlayerPrefs.GetInt("BestScore", 0);
+        TotalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+        TotalKills = PlayerPrefs.GetInt("TotalKills", 0);
+        TotalBosses = PlayerPrefs.GetInt("TotalBosses", 0);
+        TotalDeaths = PlayerPrefs.GetInt("TotalDeaths", 0);
     }
 
     private void OnDisable()
@@ -32,6 +45,12 @@ public class GameData : MonoBehaviour
         PlayerPrefs.SetInt("MagnetBonus", MagnetBonus);
         PlayerPrefs.SetInt("BombBonus", BombBonus);
         PlayerPrefs.SetInt("X2Bonus", X2Bonus);
+
+        PlayerPrefs.SetInt("BestScore", BestScore);
+        PlayerPrefs.SetInt("TotalCoins", TotalCoins);
+        PlayerPrefs.SetInt("TotalKills", TotalKills);
+        PlayerPrefs.SetInt("TotalBosses", TotalBosses);
+        PlayerPrefs.SetInt("TotalDeaths", TotalDeaths);
     }
 
     private void Update()
