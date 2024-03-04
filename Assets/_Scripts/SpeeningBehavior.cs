@@ -6,6 +6,14 @@ public class SpeeningBehavior : MonoBehaviour
 {
     [SerializeField] private GameObject _circle;
 
+    [SerializeField] private GameObject _magnetGift;
+    [SerializeField] private GameObject _bombGift;
+    [SerializeField] private GameObject _x2Gift;
+
+    [SerializeField] private GameObject _cantSpeen;
+    [SerializeField] private GameObject _speeningPanel;
+    
+
     private float _speed;
     private bool _mark;
 
@@ -35,24 +43,42 @@ public class SpeeningBehavior : MonoBehaviour
             (_circle.transform.localEulerAngles.z <= 365 && _circle.transform.localEulerAngles.z >= 348) ||
             (_circle.transform.localEulerAngles.z <= 237 && _circle.transform.localEulerAngles.z >= 213))
         {
-            Debug.Log("bomb");
+            _bombGift.SetActive(true);
         }
         else if ((_circle.transform.localEulerAngles.z <= 103 && _circle.transform.localEulerAngles.z >= 78) ||
                 (_circle.transform.localEulerAngles.z <= 192 && _circle.transform.localEulerAngles.z >= 168) ||
                 (_circle.transform.localEulerAngles.z <= 326 && _circle.transform.localEulerAngles.z >= 302))
         {
-            Debug.Log("magnet");
+            _magnetGift.SetActive(true);
         }
         else if ((_circle.transform.localEulerAngles.z <= 57 && _circle.transform.localEulerAngles.z >= 34) ||
                 (_circle.transform.localEulerAngles.z <= 148 && _circle.transform.localEulerAngles.z >= 123) ||
                 (_circle.transform.localEulerAngles.z <= 282 && _circle.transform.localEulerAngles.z >= 258))
         {
-            Debug.Log("x2");
+            _x2Gift.SetActive(true);
         }
         else
         {
-            Debug.Log("empty");
+            _cantSpeen.SetActive(true);
+            _speeningPanel.SetActive(false);
         }
-        Debug.Log(_circle.transform.localEulerAngles.z);
+    }
+
+    public void ClaimMagnet()
+    {
+        GameData.MagnetBonus++;
+        _magnetGift.SetActive(false);
+    }
+
+    public void ClaimBomb()
+    {
+        GameData.BombBonus++;
+        _bombGift.SetActive(false);
+    }
+
+    public void ClaimX2()
+    {
+        GameData.X2Bonus++;
+        _x2Gift.SetActive(false);
     }
 }
