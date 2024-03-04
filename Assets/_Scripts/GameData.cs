@@ -24,7 +24,7 @@ public class GameData : MonoBehaviour
 
     [SerializeField] private ScreenOrientation _screenOrientation;
 
-    private void Start()
+    private void OnEnable()
     {
         Screen.orientation = _screenOrientation;
         Gems = PlayerPrefs.GetInt("Gems", 0);
