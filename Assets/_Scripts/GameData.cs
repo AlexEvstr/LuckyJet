@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -30,7 +28,7 @@ public class GameData : MonoBehaviour
         Gems = PlayerPrefs.GetInt("Gems", 0);
         //////
         //////
-        Gems = 10000;
+        //Gems = 10000;
         //////
         /////
         MagnetBonus = PlayerPrefs.GetInt("MagnetBonus", 5);

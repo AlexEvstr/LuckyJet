@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossShootFireBall : MonoBehaviour
@@ -15,8 +14,8 @@ public class BossShootFireBall : MonoBehaviour
     {
         while(true)
         {
-            Instantiate(_bossFireBall, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
             yield return new WaitForSeconds(3.0f);
+            Instantiate(_bossFireBall, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         }
     }
 }
